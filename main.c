@@ -24,7 +24,7 @@ int main(int argc, char **argv) {
     return 1;
   }
   libusb_device_handle *handle = NULL;
-  handle = libusb_open_device_with_vid_pid(ctx, 0x1044, 0x7a39);
+  handle = libusb_open_device_with_vid_pid(ctx, 0x04d9, 0x8008);
   if (handle == NULL) {
     printf("Failed to open device!\n");
     libusb_exit(ctx);
