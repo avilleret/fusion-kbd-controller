@@ -78,7 +78,7 @@ int set_mode(libusb_device_handle *handle, uint8_t mode, uint8_t color, uint8_t 
     printf("Control transfer 1 failed! %d\n", r);
     return -1;
   } else {
-    printf("Control transfer 1 OK!\n");
+    // printf("Control transfer 1 OK!\n");
   }
 
   header.mode = mode;
@@ -92,7 +92,7 @@ int set_mode(libusb_device_handle *handle, uint8_t mode, uint8_t color, uint8_t 
     printf("Control transfer 2 failed! %d\n", r);
     return -1;
   } else {
-    printf("Control transfer 2 OK!\n");
+    // printf("Control transfer 2 OK!\n");
   }
   return 0;
 }
@@ -113,7 +113,7 @@ int set_custom_mode(libusb_device_handle *handle, uint8_t *data) {
     printf("Control transfer 1 failed! %d\n", r);
     return -1;
   } else {
-    printf("Control transfer 1 OK!\n");
+    // printf("Control transfer 1 OK!\n");
   }
 
   for (uint8_t i = 0; i < 8; i++) {
@@ -123,7 +123,7 @@ int set_custom_mode(libusb_device_handle *handle, uint8_t *data) {
       printf("Interrupt transfer %d failed", i);
     }
   }
-  printf("Interrupt transfers OK!\n");
+  // printf("Interrupt transfers OK!\n");
 
   header.kind = KIND_PRESET;
   header.reserved = RESERVED1;
@@ -139,7 +139,7 @@ int set_custom_mode(libusb_device_handle *handle, uint8_t *data) {
     printf("Control transfer 2 failed! %d\n", r);
     return -1;
   } else {
-    printf("Control transfer 2 OK!\n");
+    // printf("Control transfer 2 OK!\n");
   }
   return 0;
 }
